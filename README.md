@@ -68,3 +68,7 @@ The list keeps changing. Issues and PRs are welcome — even just "this should b
 **Two easy traps:** the 7 gated repos (the 3 Llama ones + Llama-Guard, FLUX, fineweb-edu, dolma3_mix-6T, embeddinggemma) require accepting terms on HF and setting `HF_TOKEN`; after a real download keep `PROVENANCE.txt` and `SHA256SUMS.txt` — during recovery they are the only evidence. If you can, it is well worth actually running a drill; that's how you make sure nothing is in fact missing.
 
 Contributions that are actually useful: tested sizes and throughput on real hardware, missing dependencies (the goal is that an offline machine boots from what you downloaded), license changes, and any real recovery-drill reports.
+
+## License
+
+The list, the scripts and the documents in this repo are MIT-licensed — see [LICENSE](LICENSE). **That does not cover the models themselves**: every entry keeps its upstream license (the `license` column in `manifest.csv`, and §11.1 of [ai-backup-list_v1.md](ai-backup-list_v1.md)); several are gated, non-commercial, or custom-licensed.

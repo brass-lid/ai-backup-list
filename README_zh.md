@@ -62,3 +62,7 @@ TIER=0 DEST=/Volumes/SEED ./download.sh
 4. PR 里说清改了什么、为什么、证据在哪。
 
 **两个容易踩的坑：** 7 条 gated 仓库（Llama 系 3 条 + Llama-Guard、FLUX、fineweb-edu、dolma3_mix-6T、embeddinggemma）需先在 HF 接受条款并配 `HF_TOKEN`；真实下载后请保留 `PROVENANCE.txt` 与 `SHA256SUMS.txt`——恢复时它们是唯一的证据。有条件的话，强烈建议运行，这样可以确保没有确实依赖。
+
+## 许可
+
+本仓库的清单、脚本与文档采用 MIT 许可，见 [LICENSE](LICENSE)。**这不覆盖清单里的模型本身**：每条都沿用其上游许可（`manifest.csv` 的 `license` 列，以及[正文 §11.1](ai-backup-list_v1_zh.md)）；其中若干是 gated、非商用或自定义许可。
