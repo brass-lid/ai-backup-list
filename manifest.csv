@@ -1,0 +1,68 @@
+tier,tier_name,priority,category,artifact,repo_id,revision,size_gb,license,note,include
+0,T0 火种 8GB,S,engine,llama.cpp 源码 + 预编译 (linux/mac/win/arm),engines:llama,v1.0.0,0.12,MIT,v1.0.0（2026-11-13）这个 tag 只发源码（37MB）；预编译在 nightly b 号 tag（钉 b12368）：macos-arm64 / ubuntu-x64 / ubuntu-arm64 / win-cpu-x64 四平台共 80MB，实测合计 0.12GB。用 fetch-engines.sh 取,
+0,T0 火种 8GB,S,text-small,Qwen3.5-0.8B GGUF Q8_0,unsloth/Qwen3.5-0.8B-GGUF,6ab461498e2023f6e3c1baea90a8f0fe38ab64d0,0.81,Apache-2.0,手机/树莓派可跑；Q4_K_M 仅 0.53GB,Qwen3.5-0.8B-Q8_0.gguf
+0,T0 火种 8GB,S,text-small,Qwen3.5-2B GGUF Q5_K_M,unsloth/Qwen3.5-2B-GGUF,f6d5376be1edb4d416d56da11e5397a961aca8ae,1.44,Apache-2.0,8GB 内存笔记本主力,Qwen3.5-2B-Q5_K_M.gguf
+0,T0 火种 8GB,S,text-small,Qwen3.5-4B GGUF Q4_K_M,unsloth/Qwen3.5-4B-GGUF,e87f176479d0855a907a41277aca2f8ee7a09523,2.74,Apache-2.0,性价比拐点；Q8_0 为 4.48GB,Qwen3.5-4B-Q4_K_M.gguf
+0,T0 火种 8GB,A,embed,Qwen3-Embedding-0.6B GGUF Q8_0,Qwen/Qwen3-Embedding-0.6B-GGUF,370f27d7550e0def9b39c1f16d3fbaa13aa67728,0.64,Apache-2.0,RAG/检索的最小可用件；safetensors 1.2GB,Qwen3-Embedding-0.6B-Q8_0.gguf
+0,T0 火种 8GB,B,audio,whisper-tiny (PyTorch/CT2),openai/whisper-tiny,169d4a4341b33bc18d8881c4b69c2e104e1cc0af,0.61,MIT,离线转写最小件；仓库含 h5/bin/safetensors/msgpack 四份等价权重（各 0.15GB），全仓实测 0.61GB；建议同时留 base,
+0,T0 火种 8GB,B,audio,Kokoro-82M TTS,hexgrad/Kokoro-82M,f3ff3571791e39611d31c381e3a41a3af07b4987,0.36,Apache-2.0,82M 参数，CPU 实时,
+0,T0 火种 8GB,S,docs,核心论文与文档包 (PDF/HTML/MD),docs:§7,-,0.12,混合,正文 §7 的 42 篇文献（docs.csv）；fetch-docs.sh 抓 PDF 并写 index.md——arXiv 无 commit sha，抓取日期即证据链（实测 0.12GB）,
+1,T1 入门 64GB,S,text-mid,Qwen3.8-27B GGUF Q4_K_M,unsloth/Qwen3.8-27B-GGUF,4af51b3542f775b0a8e4b310bfb3f17e01c306c9,16.56,Apache-2.0,原生视觉+26万上下文；单机甜点,Qwen3.8-27B-UD-Q4_K_M.gguf
+1,T1 入门 64GB,A,text-mid,Qwen3.5-9B GGUF Q5_K_M,unsloth/Qwen3.5-9B-GGUF,3885219b6810b007914f3a7950a8d1b469d598a5,6.58,Apache-2.0,9B 视觉语言；bf16 母本 19.3GB 见 T2 备选,Qwen3.5-9B-Q5_K_M.gguf
+1,T1 入门 64GB,A,embed,BAAI/bge-m3,BAAI/bge-m3,5617a9f61b028005a4858fdac845db406aefb181,2.30,MIT,多语言稠密+稀疏+多向量，RAG 常青树,
+2,T2 主力 512GB,A,vision,Qwen3-VL-8B-Instruct,Qwen/Qwen3-VL-8B-Instruct,0c351dd01ed87e9c1b53cbc748cba10e6187ff3b,17.50,Apache-2.0,文档/图表/视频理解,
+2,T2 主力 512GB,A,audio,whisper-large-v3-turbo,openai/whisper-large-v3-turbo,41f01f3fe87f28c78e2fbf8b568835947dd65ed9,1.60,MIT,多语言 ASR 事实标准,
+2,T2 主力 512GB,A,audio,parakeet-tdt-0.6b-v3,nvidia/parakeet-tdt-0.6b-v3,541d1f99c6b0c3cd0b11a95167540bb8edefd82b,5.73,CC-BY-4.0,英文 ASR 更快更准；仓库含 .nemo + safetensors + GGUF 三份，GGUF 仅 0.71GB，全仓实测 5.73GB,
+2,T2 主力 512GB,A,rerank,bge-reranker-v2-m3,BAAI/bge-reranker-v2-m3,953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e,2.30,Apache-2.0,RAG 精度关键；小到该无条件带上,
+2,T2 主力 512GB,A,ocr,DeepSeek-OCR,deepseek-ai/DeepSeek-OCR,9f30c71f441d010e5429c532364a86705536c53a,6.68,MIT,3.3B；同一能力比 Unlimited-OCR 省一半空间，二者二选一即可,
+2,T2 主力 512GB,B,ocr,GLM-OCR,zai-org/GLM-OCR,2e85a62840ccac27daa451df36c736c4636b8628,2.66,MIT,轻量中文 OCR；2.7GB 换一个专用能力，值得带,
+2,T2 主力 512GB,A,embed,Qwen3-Embedding-0.6B,Qwen/Qwen3-Embedding-0.6B,97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3,1.21,Apache-2.0,RAG 母本，可自己再量化；只要 GGUF 就用 T0 那条,
+2,T2 主力 512GB,B,embed,embeddinggemma-300m,google/embeddinggemma-300m,57c266a740f537b4dc058e1b0cda161fd15afa75,1.27,Gemma,端侧检索（1.2GB 就能跑）；HF gated(manual)，需接受 Gemma 条款,
+2,T2 主力 512GB,B,guard,Shieldstral-1.0-3B,mistralai/Shieldstral-1.0-3B,003ec7e2b0bab5f0e6307edbaf186fa5822b76f5,15.43,Apache-2.0,3.8B 小护栏；仓库含两份 7.7GB 等价权重（model / consolidated），全仓 15.4GB,
+1,T1 入门 64GB,A,text-mid,Qwen3.6-35B-A3B GGUF Q4_K_M,unsloth/Qwen3.6-35B-A3B-GGUF,a483e9e6cbd595906af30beda3187c2663a1118c,22.13,Apache-2.0,3B 激活、16GB 内存可跑；BF16 母本同一层已有，这对是「母本 + 能跑的量化」,Qwen3.6-35B-A3B-UD-Q4_K_M.gguf
+2,T2 主力 512GB,A,text-mid,Qwen3.5-9B,Qwen/Qwen3.5-9B,c202236235762e1c871ad0ccb60c8ee5ba337b9a,19.33,Apache-2.0,9B 视觉语言母本，可再量化；GGUF Q5（6.58GB）在 T1,
+2,T2 主力 512GB,A,text-frontier,GLM-5.3-Flash EXL3 4bpw,Mia-AiLab/GLM-5.3-Flash-EXL3-4bpw-TensorFold,76c0b5173166d2795dd48860f45d8224817f894c,175.70,GLM License,321B 的 4-bit 版（EXL3/exllamav3，TensorFold 83 分片）；原版是 FP8 328GB。知识密集用途可换同仓 Q6（292GB，见 T3 备选）,
+2,T2 主力 512GB,A,text-frontier,Qwen3.8-Flash-Next GGUF Q4_K_XL,unsloth/Qwen3.8-Flash-Next-GGUF,f5d175de2cf7f720d45d6064019a81fcf056e986,111.32,Qwen License,180B 的 4-bit 版（四片）；原版 BF16 360GB 在 T5。Q4 已能跑在 128GB 内存的机器上,UD-Q4_K_XL/*
+2,T2 主力 512GB,S,engine,推理引擎与工具仓库 (§5),repos:§5,-,1.55,混合,§5 的 20 个仓库（repos.csv，按 tier 取）：T2 拿到 vLLM/SGLang/ExLlamaV2/llama-cpp-python/transformers/peft/MLX/oMLX/Strata/DwarfStar4（约 1.5GB），T3 加评测与前端，T4 加 TensorRT-LLM。全部钉到 commit,
+1,T1 入门 64GB,S,agent,pi (earendil-works),github.com/earendil-works/pi,97d539ce4c2c7db681bf7acdbbb07ca09533400d,0.08,MIT,统一 LLM API + agent loop + TUI + 编码 agent；121.9k★；官方 prebuilt 在 release（见安装包行），源码需 Node 22.19+,
+1,T1 入门 64GB,S,agent,ohmypi (omp),github.com/can1357/oh-my-pi,e9414763d60efc0b1848f281f39d592d46ff8a7f,0.33,MIT,把 IDE 接进 agent 的编码工具（CLI 名 omp）；38.9k★；单文件二进制 223–287MB 在 release；源码是 814MB monorepo,
+1,T1 入门 64GB,S,agent,DeepSeek Harness (dsh),github.com/deepseek-ai/deepseek-harness,39163dd30f703a79079e2d2446545cff3c453738,0.25,MIT,「万物皆插件」的 harness；280k★；无独立安装包，需要 Node + pnpm install，或整目录复制 node_modules,
+1,T1 入门 64GB,S,agent,Hermes Agent,github.com/NousResearch/hermes-agent,b70a53eb086ced07843a58d82abab6601628f5e8,0.42,MIT,NousResearch 的长期/可成长 agent；263k★；无 release 资产，装法只有 install.sh（联网拉取）或源码 + pnpm,
+1,T1 入门 64GB,S,installer,独立安装包（release 资产）,installers:§5,-,1.60,混合,pi / omp / Strata / oMLX 的官方预编译：pi 三平台 tar/zip、omp 三平台单文件、Strata 三平台安装包 + Metal 后端、oMLX py312/313 wheel；dsh 与 hermes 无独立包，只能源码 + pnpm,
+2,T2 主力 512GB,S,corpus,Wikipedia EN dump (2026-10),-,-,21.00,CC-BY-SA,非 HF 资产：dumps.wikimedia.org 的 pages-articles XML（或 Kiwix ZIM 更省空间），download.sh 会跳过；ZIM 版更适合无算力者,
+3,T3 严肃 1TB,A,text-mid,Nemotron-3-Nano-30B-A3B,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,bf77c3174f68ad409e1c2aa60daeb46e32d1c606,63.20,NVIDIA Open,混合 Mamba/Transformer，长上下文高效,
+5,T5 方舟 20TB,B,text-mid,Llama-3.3-70B-Instruct,meta-llama/Llama-3.3-70B-Instruct,6f6073b423013f6a7d4d9f39144961bfbfbc386b,141.10,Llama-3.3,旧生态兼容层；HF gated(manual)，需先接受许可 + token,
+3,T3 严肃 1TB,A,abliterated,Huihui-Qwen3.8-27B-abliterated GGUF Q4_K_M,huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF,06b4baa33b310388002b3dd1c1ea701ff691c901,16.55,Apache-2.0,继承 Apache-2.0；原表把 artifact 写成 Q5_K_M、revision 误抄了 BF16 母本，已按仓库实测改正（Q4_K_M，16.55GB）；bf16 母本 55.6GB 在 T4,Huihui-Qwen3.8-27B-abliterated-UD-DW-Q4_K_M.gguf
+3,T3 严肃 1TB,A,guard,Llama-Guard-4-12B,meta-llama/Llama-Guard-4-12B,87acb4b94e930c3d679e6e7ee9d57e2feab9ea71,24.00,Llama-4,保留护栏，才有资格谈「火种」；HF gated(manual),
+3,T3 严肃 1TB,B,image,Qwen-Image,Qwen/Qwen-Image,75e0b4be04f60ec59a75f475837eced720f823b6,57.70,Apache-2.0,20B 图像生成/编辑，中文排版强,
+2,T2 主力 512GB,A,embed,Qwen3-Embedding-8B,Qwen/Qwen3-Embedding-8B,1d8ad4ca9b3dd8059ad90a75d4983776a23d44af,15.10,Apache-2.0,多语言 MTEB 头部；0.6B 版在 T0,
+3,T3 严肃 1TB,B,ocr,olmOCR-2-7B,allenai/olmOCR-2-7B-1025,e52d6f090b7a9007afffbbd6ce510876222fea93,16.60,Apache-2.0,学术 PDF 结构化；OCR 系里最大的一条，放在 T3,
+3,T3 严肃 1TB,S,tool,Heretic,github.com/p-e-w/heretic,4f89482c0d63f2552a582215939910f9f45a3e5f,0.0022,AGPL-3.0,v2.1.0（2026-11-08）；训练无关：一次前向统计估拒绝方向再优化去除，游戏 PC 一下午跑完；pip 包名 heretic-llm；40.5k★。AGPL：分发改造版要开源,
+3,T3 严肃 1TB,A,tool,OBLITERATUS,github.com/elder-plinius/OBLITERATUS,461ff086e675d93969bbd7c99c53505762452309,0.0838,AGPL-3.0,v0.1.4（2026-10-15）；Gradio 界面 + HF Space(ZeroGPU) + Docker + CLI 六种用法，会顺带出拒绝率/能力对比报告；本地遥测默认关闭（Space 上自动开）；9.5k★,
+3,T3 严肃 1TB,A,tool,remove-refusals-with-transformers,github.com/Sumandora/remove-refusals-with-transformers,7786b0a8c50f4e7c16a0e300e697b2876decc0c6,0.0027,Apache-2.0,不依赖 TransformerLens，任何 HF Transformers 模型都能跑；作者在 RTX 2060 6GB 上测通；代码短、最好读，适合先照着抄一遍,
+3,T3 严肃 1TB,B,tool,abliterator,github.com/FailSpy/abliterator,56ee3f72b9b1f6afe71e4b0dada27e0322c3c142,0.0002,MIT,TransformerLens 上的消融库：拒绝方向计算、激活缓存、临时上下文、正交化工作流；2024-06 后未更新，当方法论参考,
+3,T3 严肃 1TB,B,tool,refusal_direction（论文复现）,github.com/andyrdt/refusal_direction,9d852fae1a9121c78b29142de733cb1340770cc3,0.0905,Apache-2.0,《Refusal in LMs Is Mediated by a Single Direction》(arXiv 2406.11717) 的代码与结果；想搞清「为什么删一个方向就够」先读它,
+3,T3 严肃 1TB,B,tool,repeng（控制向量）,github.com/vgel/repeng,0ba7196d81f7c5de28b1159c9d1732440afd97ce,0.0010,MIT,表征工程/控制向量，PyPI 可装；不是 abliteration，但同一套「干预内部状态」的手艺——当作对照组和更细粒度的调节,
+3,T3 严肃 1TB,S,text-frontier,DeepSeek-V4-Flash,deepseek-ai/DeepSeek-V4-Flash,60d8d70770c6776ff598c94bb586a859a38244f1,159.63,MIT,284B/13B 激活、1M 上下文、FP4+FP8 混合，46 分片共 159.6GB；T3 里最前沿的一件，缺了 T5 的重型原版也有模型可跑,
+3,T3 严肃 1TB,B,text-mid,Gemma-4-31B-it GGUF Q8_0,unsloth/gemma-4-31B-it-GGUF,c1ac76e99d5513b141e8adde7288b85c3f9c32ec,32.64,Apache-2.0,unsloth 的 Q8 单文件（32.6GB）；Q4_K_M 18.3GB 更省；母本 62.6GB 在 T4,gemma-4-31B-it-Q8_0.gguf
+4,T4 前沿 4TB,S,text-mid,Qwen3.8-27B,Qwen/Qwen3.8-27B,37561816e66b5b9153b1b64c10968c18c1e6f4a0,55.60,Apache-2.0,可微调的全精度母本；与 T1 的 GGUF 二选一或都留；原版（非量化）随 T4；官方未发布 base，只有后训练权重,
+4,T4 前沿 4TB,S,text-mid,Qwen3.6-35B-A3B,Qwen/Qwen3.6-35B-A3B,345d467b117d1fd5eda9b879a5988de9ae5f47a7,71.90,Apache-2.0,35B 总参/3B 激活，agentic coding；GGUF Q4 22.1GB；原版（非量化）随 T4；官方未发布 base，只有后训练权重,
+4,T4 前沿 4TB,B,text-mid,Gemma-4-31B,google/gemma-4-31B,5bbc2fb1c1b2c611d06e3d9f23c170ba21659d89,62.58,Apache-2.0,Gemma-4-31B-it 的预训练版本；想换指令格式或重做对齐就用它,
+5,T5 方舟 20TB,B,text-frontier,DeepSeek-V3.2-Exp-Base,deepseek-ai/DeepSeek-V3.2-Exp-Base,b21ef155036dfbbd6d49013a345d31d5f5e38c89,689.50,MIT,V3.2 的预训练母本（仓库 base_model 字段指向它）；后训练从这里重新出发,
+4,T4 前沿 4TB,A,text-frontier,GLM-5.3-Flash,zai-org/GLM-5.3-Flash,46a050bec13002ad29ee795c16e61cf4fa3c4a9c,328.40,MIT,321B；中文与工具调用强；原版 FP8（约 1.0 字节/参数）；官方未发布 base,
+4,T4 前沿 4TB,B,text-frontier,Nemotron-3-Super-120B-A12B,nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16,2dc98e2afe4face0e4ce40972a915c45368bd34a,247.20,NVIDIA Open,120B/12B 激活；可商用条款需读；官方未发布 base,
+4,T4 前沿 4TB,B,image,FLUX.1-dev,black-forest-labs/FLUX.1-dev,3de623fc3c33e44ffbe2bad470d0f45bccf2eb21,57.90,FLUX Non-Commercial,非商用许可；生态最大；HF gated(auto),
+4,T4 前沿 4TB,B,video,Wan2.2-T2V-A14B,Wan-AI/Wan2.2-T2V-A14B,c8c270b13ee05bfa474194ac9fb07a5868a97cea,126.20,Apache-2.0,开源视频生成头部；高/低噪双塔 + umt5 文本编码器合计 126.2GB（早先漏算编码器）,
+4,T4 前沿 4TB,B,corpus,FineWeb-Edu sample-10BT + 中文语料样本,HuggingFaceFW/fineweb-edu,87f09149ef4734204d70ed1d046ddc9ca3f2b8f9,30.00,ODC-By,预训练/继续训练的种子；HF gated(401)，需 token；全量在 T6,
+4,T4 前沿 4TB,B,image,Qwen3.8-Flash-Next,Qwen/Qwen3.8-Flash-Next,812d96e10a0dd82b69d749e68693698cf6c36daa,360.00,Qwen License,180B；abliterated 社区的主要基座；官方未发布 base；T5 只留 1.5TB 级，这类中量旗舰放 T4,
+5,T5 方舟 20TB,B,text-frontier,DeepSeek-R1,deepseek-ai/DeepSeek-R1,56d4cbbb4d29f4355bab4b9a39ccb717a14ad5ad,688.60,MIT,推理链谱系源头；蒸馏小模型遍地；原版 FP8（约 1.0 字节/参数）；预训练基座是 DeepSeek-V3-Base（688.6GB），可从零复现推理链；T5 只留 1.5TB 级，这类中量旗舰放 T4,
+4,T4 前沿 4TB,S,text-mid,Qwen3.5-35B-A3B-Base,Qwen/Qwen3.5-35B-A3B-Base,0f0813072d2358973511097385626f21fcb6d422,71.93,Apache-2.0,Qwen 官方唯一可用的 30B 级 base（27B 三代都没发 base）；后训练/继续预训练从这里出发,
+4,T4 前沿 4TB,A,text-small,Qwen3.5-9B-Base,Qwen/Qwen3.5-9B-Base,68c46c4b3498877f3ef123c856ecfde50c39f404,19.33,Apache-2.0,9B 的 base：小到能在单卡上重做对齐实验，性价比最高的「练手母本」,
+4,T4 前沿 4TB,A,text-frontier,DeepSeek-V4.1-Flash,deepseek-ai/DeepSeek-V4.1-Flash,314113f8a7dadb388215396ba5fbee2c610a04d6,510.30,MIT,763B；V4 系列的迭代版；原版 FP8/FP4 混合（约 0.67 字节/参数）；官方未发布 base；510GB 是 T4 里最重的一条，放 T5 保持 4TB 盘,
+4,T4 前沿 4TB,S,text-frontier,GLM-5.3 GGUF UD-Q4_K_XL,unsloth/GLM-5.3-GGUF,346b3591c7f28d1a23716f97a065ecf12ec14771,467.3,GLM License,可选量化版：11 分片共 467.3GB；嫌大可换 Q3_K_XL（343GB）或 IQ4_XS（365GB）；与 T5 的 FP8 原版二选一,UD-Q4_K_XL/*
+5,T5 方舟 20TB,B,text-frontier,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base,98730c030fbdbaca4950788280a35c4642b208a9,1606.07,MIT,V4-Pro 的预训练母本（BF16，比 FP4 原版大一倍）；1.6TB 级，只给真要重训的人,
+5,T5 方舟 20TB,S,text-frontier,Kimi-K3,moonshotai/Kimi-K3,f831ab66814297da540d832a5235f8e904f29d06,1560.90,Kimi K3 License,2.8T/16-of-896 专家；开放 3T 级；原版即压缩权重（约 0.56 字节/参数，INT4 级），需官方推理栈；官方未发布 base,
+5,T5 方舟 20TB,S,text-frontier,GLM-5.3,zai-org/GLM-5.3,ba32f8c19c8738e2c57c71798c601d477a7bf844,755.70,GLM License,753B；非商用限制需读；原版 FP8（约 1.0 字节/参数）,
+5,T5 方舟 20TB,B,image,SDXL base 1.0,stabilityai/stable-diffusion-xl-base-1.0,462165984030d82259a11f4367a4eed129e94a7b,6.94,OpenRAIL++,只取单文件 checkpoint；同仓还有 diffusers/Flax/ONNX 多套格式，全下载 76.9GB。旧生态兼容，ControlNet/LoRA 海量,sd_xl_base_1.0.safetensors
+5,T5 方舟 20TB,B,audio,Qwen3-TTS-12Hz-1.7B-Base,Qwen/Qwen3-TTS-12Hz-1.7B-Base,fd4b254389122332181a7c3db7f27e918eec64e3,4.54,Apache-2.0,多语言 TTS，支持克隆（需授权）,
+5,T5 方舟 20TB,B,corpus,Dolma3 / The Stack v2 样本,allenai/dolma3_mix-6T,689a3ea2d8217e64d73a5058913fa43ad15e81aa,500.00,ODC-By,代码与文本混合样本；HF gated(401)，需 token；全量在 T6,

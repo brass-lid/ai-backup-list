@@ -1,0 +1,25 @@
+name,repo,ref,sha,date,core,tier
+llama.cpp,ggml-org/llama.cpp,v1.0.0,b1b770d90d94cad9e9ea5b993bdbc383a522fb28,2026-11-13,1,0
+DeepSeek Harness (dsh),deepseek-ai/deepseek-harness,HEAD,39163dd30f703a79079e2d2446545cff3c453738,2026-11-13,1,2
+DwarfStar4,antirez/ds4,HEAD,b3f50180ec2c7324892be1f50bc83555ccb8d5e7,2026-11-03,1,2
+ExLlamaV2,turboderp-org/exllamav2,v0.3.2,6a2d8311408aa23af34e8ec32e28085ea68dada7,2025-07-13,1,2
+Hermes Agent,NousResearch/hermes-agent,HEAD,b70a53eb086ced07843a58d82abab6601628f5e8,2026-11-13,1,2
+MLX,ml-explore/mlx,v0.32.4,36969c094354086e15d2a327a9c50feb20b9cf11,2026-10-14,0,2
+SGLang,sgl-project/sglang,v0.5.23,297e54fd105e974cdf401e5b4d20253a22c16f90,2026-10-29,1,2
+Strata,Niko1221/Strata,HEAD,13eedf552417a6a791a7d13c6597e24300ee3a09,2026-11-12,1,2
+llama-cpp-python,abetlen/llama-cpp-python,v0.3.36,1652066e0af45f2313b339670ef9555e8a54e545,2026-10-01,1,2
+oMLX,jundot/omlx,HEAD,624cff0e23519ba46a4d5ed2802c2c236ad1a9ac,2026-11-13,1,2
+oh-my-pi (omp),can1357/oh-my-pi,HEAD,e9414763d60efc0b1848f281f39d592d46ff8a7f,2026-11-13,1,2
+peft,huggingface/peft,v0.21.3,599e264cc9c62f93a7d6a0279b413b9c576812ca,2026-11-13,1,2
+pi,earendil-works/pi,HEAD,97d539ce4c2c7db681bf7acdbbb07ca09533400d,2026-11-13,1,2
+transformers,huggingface/transformers,v5.23.0,52b080b6416a7897e2af90febeb4dfad22b84d19,2026-11-13,1,2
+vLLM,vllm-project/vllm,v0.33.0,4ba787ec9959e566d3b587a796dff07673324da5,2026-10-31,1,2
+MLC-LLM,mlc-ai/mlc-llm,HEAD,44fd06d04f22c87820e205b0f2b2e5e6a1f6ca85,2026-10-30,0,3
+ONNX Runtime,microsoft/onnxruntime,HEAD,f4cd337911c2212d9e33382b5133697c078f1935,2026-11-13,0,3
+Ollama,ollama/ollama,v0.40.16,d63b702609c4300a2ca07be2bdb0adb9834725e5,2026-11-08,0,3
+Open WebUI,open-webui/open-webui,HEAD,b0e6098e940942281d9c83f3529ea117287a3a22,2026-11-08,0,3
+candle,huggingface/candle,HEAD,cfcbd7186d13271843ce7eb41d25659bd0835850,2026-11-01,0,3
+koboldcpp,LostRuins/koboldcpp,HEAD,6d2fedf8624e5f05926af3191f9efdcb13c4133c,2026-11-02,0,3
+lm-evaluation-harness,EleutherAI/lm-evaluation-harness,HEAD,d6de81643928d653435c431bae19945d41d32520,2026-09-14,1,3
+mistral.rs,EricLBuehler/mistral.rs,HEAD,fb4cdc3730dc64b366724e7637a205a8b7747499,2026-11-09,0,3
+TensorRT-LLM,NVIDIA/TensorRT-LLM,v1.2.1,376f7e1bd8ed543f75014309e3fd4b237e9b0e73,2026-04-16,0,4

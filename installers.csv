@@ -1,0 +1,18 @@
+name,repo,pattern,note
+pi,earendil-works/pi,pi-darwin-arm64.tar.gz,官方 prebuilt（Node 22.19+ 打包）；其余平台见 release
+pi,earendil-works/pi,pi-linux-x64.tar.gz,
+pi,earendil-works/pi,pi-windows-x64.zip,
+pi,earendil-works/pi,SHA256SUMS,校验用
+omp (oh-my-pi),can1357/oh-my-pi,omp-darwin-arm64,单文件二进制 223MB
+omp (oh-my-pi),can1357/oh-my-pi,omp-linux-x64,
+omp (oh-my-pi),can1357/oh-my-pi,omp-windows-x64.exe,
+omp (oh-my-pi),can1357/oh-my-pi,SHA256SUMS.txt,校验用
+Strata,Niko1221/Strata,Strata-*-macos-arm64.dmg,GUI 安装包
+Strata,Niko1221/Strata,Strata-*-windows-x64-setup.exe,
+Strata,Niko1221/Strata,Strata-*-linux-x86_64.AppImage,
+Strata,Niko1221/Strata,strata-engine-*-macos-arm64-metal.tar.gz,Metal 后端（小；CUDA/ROCm 后端 200–950MB 按需自取）
+Strata,Niko1221/Strata,install.sh,官方安装脚本
+Strata,Niko1221/Strata,install.ps1,
+Strata,Niko1221/Strata,SHA256SUMS.txt,校验用
+oMLX,jundot/omlx,omlx-*-cp312-*.whl,macOS universal2 wheel
+oMLX,jundot/omlx,omlx-*-cp313-*.whl,

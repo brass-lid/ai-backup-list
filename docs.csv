@@ -1,0 +1,43 @@
+id,kind,section,title,url
+1706.03762,arxiv,7.1 架构与训练基础,Transformer,https://arxiv.org/abs/1706.03762
+2005.14165,arxiv,7.1 架构与训练基础,规模化语言模型,https://arxiv.org/abs/2005.14165
+2001.08361,arxiv,7.1 架构与训练基础,缩放定律,https://arxiv.org/abs/2001.08361
+2203.15556,arxiv,7.1 架构与训练基础,计算最优训练,https://arxiv.org/abs/2203.15556
+2101.03961,arxiv,7.1 架构与训练基础,MoE 路由,https://arxiv.org/abs/2101.03961
+2401.06066,arxiv,7.1 架构与训练基础,细粒度 MoE,https://arxiv.org/abs/2401.06066
+2312.00752,arxiv,7.1 架构与训练基础,状态空间模型,https://arxiv.org/abs/2312.00752
+2104.09864,arxiv,7.1 架构与训练基础,位置编码,https://arxiv.org/abs/2104.09864
+2305.13245,arxiv,7.1 架构与训练基础,注意力变体,https://arxiv.org/abs/2305.13245
+2309.00071,arxiv,7.1 架构与训练基础,长上下文外推,https://arxiv.org/abs/2309.00071
+1910.07467,arxiv,7.1 架构与训练基础,归一化/激活,https://arxiv.org/abs/1910.07467
+2002.05202,arxiv,7.1 架构与训练基础,归一化/激活,https://arxiv.org/abs/2002.05202
+2407.21783,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Llama 3,https://arxiv.org/abs/2407.21783
+2310.06825,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Mistral 7B / Mixtral,https://arxiv.org/abs/2310.06825
+2401.04088,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Mistral 7B / Mixtral,https://arxiv.org/abs/2401.04088
+2405.04434,arxiv,7.2 各代开放模型的技术报告（复现的地图）,DeepSeek-V2,https://arxiv.org/abs/2405.04434
+2412.19437,arxiv,7.2 各代开放模型的技术报告（复现的地图）,DeepSeek-V3,https://arxiv.org/abs/2412.19437
+2501.12948,arxiv,7.2 各代开放模型的技术报告（复现的地图）,DeepSeek-R1,https://arxiv.org/abs/2501.12948
+2606.19348,arxiv,7.2 各代开放模型的技术报告（复现的地图）,DeepSeek-V4,https://arxiv.org/abs/2606.19348
+2505.09388,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Qwen3,https://arxiv.org/abs/2505.09388
+2506.05176,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Qwen3-Embedding,https://arxiv.org/abs/2506.05176
+2607.02770,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Gemma 4,https://arxiv.org/abs/2607.02770
+2602.15763,arxiv,7.2 各代开放模型的技术报告（复现的地图）,GLM-5,https://arxiv.org/abs/2602.15763
+2606.13392,arxiv,7.2 各代开放模型的技术报告（复现的地图）,MiniMax-M3,https://arxiv.org/abs/2606.13392
+2508.10925,arxiv,7.2 各代开放模型的技术报告（复现的地图）,gpt-oss,https://arxiv.org/abs/2508.10925
+2512.13961,arxiv,7.2 各代开放模型的技术报告（复现的地图）,OLMo 3,https://arxiv.org/abs/2512.13961
+2512.20848,arxiv,7.2 各代开放模型的技术报告（复现的地图）,Nemotron 3,https://arxiv.org/abs/2512.20848
+k3_tech_report,pdf,7.2 各代开放模型的技术报告（复现的地图）,Kimi K3,https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf
+2510.18234,arxiv,7.2 各代开放模型的技术报告（复现的地图）,DeepSeek-OCR,https://arxiv.org/abs/2510.18234
+2203.02155,arxiv,7.3 对齐与可解释性,RLHF,https://arxiv.org/abs/2203.02155
+2305.18290,arxiv,7.3 对齐与可解释性,偏好优化,https://arxiv.org/abs/2305.18290
+2402.03300,arxiv,7.3 对齐与可解释性,可验证奖励,https://arxiv.org/abs/2402.03300
+2212.08073,arxiv,7.3 对齐与可解释性,宪法式 AI,https://arxiv.org/abs/2212.08073
+2406.11717,arxiv,7.3 对齐与可解释性,拒绝的机制,https://arxiv.org/abs/2406.11717
+2309.06180,arxiv,7.4 推理、量化与工程,PagedAttention / vLLM,https://arxiv.org/abs/2309.06180
+2205.14135,arxiv,7.4 推理、量化与工程,FlashAttention / v2,https://arxiv.org/abs/2205.14135
+2307.08691,arxiv,7.4 推理、量化与工程,FlashAttention / v2,https://arxiv.org/abs/2307.08691
+2106.09685,arxiv,7.4 推理、量化与工程,LoRA / QLoRA,https://arxiv.org/abs/2106.09685
+2305.14314,arxiv,7.4 推理、量化与工程,LoRA / QLoRA,https://arxiv.org/abs/2305.14314
+2210.17323,arxiv,7.4 推理、量化与工程,GPTQ / AWQ,https://arxiv.org/abs/2210.17323
+2306.00978,arxiv,7.4 推理、量化与工程,GPTQ / AWQ,https://arxiv.org/abs/2306.00978
+2211.17192,arxiv,7.4 推理、量化与工程,投机解码,https://arxiv.org/abs/2211.17192
